@@ -1,11 +1,13 @@
 package com.dev4lazy.notepad.data;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.dev4lazy.notepad.utils.NoteKind;
@@ -25,6 +27,7 @@ public class NoteDaoTest {
 
     @Before
     public void setUp() throws Exception {
+       // Context context = ApplicśationProvider.getApplicationContext();
 //        database = NotepadDatabase.getDatabase(InstrumentationRegistry.getInstrumentation().getContext());
         database = Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getInstrumentation().getContext(),NotepadDatabase.class)
                 .addCallback(roomDatabaseCallback)

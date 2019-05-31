@@ -16,6 +16,7 @@ public class TestNotes {
         notes = new ArrayList<Note>();
         notes2 = new ArrayList<Note2>();
         createNotes();
+        createNotes2();
     }
 
     private void createNotes() {
@@ -88,15 +89,6 @@ public class TestNotes {
     private void createNotes2() {
         notes2.add(
                 new Note2.NoteBuilder()
-                        .priority(0)
-                        .creationDate(1000)
-                        .title("Auchan")
-                        .content("spodnie, buty, krawat")
-                        .kind(NoteKind.SHOPPING)
-                        .build()
-        );
-        notes2.add(
-                new Note2.NoteBuilder()
                         .priority(1)
                         .creationDate(1001)
                         .title("BRW")
@@ -111,6 +103,15 @@ public class TestNotes {
                         .title("PWR")
                         .content("zjazd")
                         .kind(NoteKind.PLACE)
+                        .build()
+        );
+        notes2.add(
+                new Note2.NoteBuilder()
+                        .priority(0)
+                        .creationDate(1000)
+                        .title("Auchan")
+                        .content("spodnie, buty, krawat")
+                        .kind(NoteKind.SHOPPING)
                         .build()
         );
         notes2.add(

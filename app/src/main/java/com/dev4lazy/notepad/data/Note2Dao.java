@@ -34,7 +34,7 @@ public interface Note2Dao {
     @Query("SELECT * FROM notes2 ORDER BY title ASC")
     List<Note2> getNotesByTitle();
 
-    @Query("SELECT * FROM notes2 ORDER BY priority ASC, creation_date DESC")
+    @Query("SELECT * FROM notes2 ORDER BY priority ASC, creation_date ASC")
     List<Note2> getNotesByPriorityAndCreationDate();
 
     @Query("SELECT * FROM notes2")
